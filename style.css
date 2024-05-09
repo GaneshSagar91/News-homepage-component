@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+p {
+  font-size: 15px;
+}
+
+a,
+button,
+h2 {
+  transition: all 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  padding: 50px 10%;
+  background-color: hsl(36, 100%, 99%);
+}
+
+header {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  padding-left: 25px;
+}
+
+a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.menu {
+  display: none;
+}
+
+main section.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px 180px auto;
+  gap: 25px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.wallpaper {
+  background: url('./assets/images/image-web-3-desktop.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-column: span 2;
+}
+
+.web-3 h1 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.description {
+  position: relative;
+}
+
+.description p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5;
+}
+
+.description button {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  border: none;
+  outline: none;
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(5, 85%, 63%);
+  text-transform: uppercase;
+  padding: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.description button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.new {
+  grid-column: 3 / -1;
+  grid-row: 1 / -2;
+  color: white;
+  background-color: hsl(240, 100%, 5%);
+  padding: 20px;
+}
+
+.new h1 {
+  color: hsl(35, 77%, 62%);
+  font-size: 30px;
+}
+
+.new div {
+  padding: 20px 0;
+}
+
+.new div:not(:last-child) {
+  border-bottom: 1px solid hsl(233, 8%, 79%, .4);
+}
+
+.new div h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.new div p {
+  color: hsl(233, 8%, 79%);
+  padding: 10px 0;
+  line-height: 1.6;
+}
+
+.item {
+  display: flex;
+  padding: 30px 0;
+  column-gap: 20px;
+}
+
+.item img {
+  width: 80px;
+}
+
+.item div h1 {
+  color: hsl(233, 8%, 79%);
+}
+
+.item div h2 {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.item div h2:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.item div p {
+  line-height: 1.5;
+  color: hsl(236, 13%, 42%);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 481px) {
+  body {
+    padding: 20px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 0%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding-top: 200px;
+    z-index: 10;
+    transition: all 0.5s;
+  }
+
+  header nav a {
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .menu {
+    display: block;
+    cursor: pointer;
+    z-index: 99;
+    transition: all 0.1s;
+  }
+
+  main section.content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .wallpaper {
+    background: url('./assets/images/image-web-3-mobile.jpg') no-repeat;
+    width: 100%;
+    height: 300px;
+    grid-column: auto;
+  }
+
+  .description {
+    position: static;
+  }
+
+  .description button {
+    position: static;
+    margin: 30px 0;
+  }
+
+  .new {
+    grid-column: auto;
+    grid-row: auto;
+    margin-bottom: 50px;
+  }
+
+  .item {
+    padding: 0;
+  }
+}
